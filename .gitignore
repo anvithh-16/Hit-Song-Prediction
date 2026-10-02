@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Raw and processed datasets
+data/raw/*
+data/processed/*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
