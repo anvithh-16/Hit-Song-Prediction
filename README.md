@@ -222,3 +222,9 @@ These are saved in:
 
 ```text
 results/figures/
+```
+
+Numerical Results are saved in:
+
+```text
+results/tables/
