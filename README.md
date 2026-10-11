@@ -144,6 +144,81 @@ All models use the same preprocessing pipeline so that their results can be
 compared under consistent preprocessing conditions.
 
 ---
+## Running the Project
+
+### 1. Prerequisites
+
+- Python 3.10 or later recommended.
+- Git installed on your system.
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/anvithh-16/hit-song-prediction.git
+cd hit-song-prediction
+```
+
+### 3. Set Up a Virtual Environment
+
+Create and activate a virtual environment:
+
+**macOS / Linux**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**Windows**
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Download and Prepare the Dataset
+
+The dataset files are excluded from the Git repository. Obtain the Spotify Audio Features Hit Predictor Dataset (1960–2019) and place the six decade-wise CSV files inside the `data/raw/` directory:
+
+```text
+data/raw/
+├── dataset-of-00s.csv
+├── dataset-of-10s.csv
+├── dataset-of-60s.csv
+├── dataset-of-70s.csv
+├── dataset-of-80s.csv
+└── dataset-of-90s.csv
+```
+
+The CSV filenames must match the `dataset-of-*.csv` pattern.
+
+### 6. Run the Project
+
+From the repository root, execute:
+
+```bash
+python main.py
+```
+
+The script loads and validates the dataset, prepares the features, performs 5-fold stratified cross-validation, trains and evaluates eight machine learning models, and generates performance visualizations.
+
+### 7. View the Results
+
+After execution, the generated results are available in:
+
+- `results/tables/cross_validation_results.csv` — cross-validation metrics.
+- `results/tables/model_comparison.csv` — held-out test-set metrics.
+- `results/figures/confusion_matrices.png` — confusion matrices for all models.
+- `results/figures/roc_curves.png` — ROC curves and AUC scores.
+- `results/figures/model_comparison.png` — model performance comparison.
+
+**Note:** Run `python main.py` from the repository root so that the relative dataset and output paths resolve correctly.
+
+---
 
 ## Evaluation
 
